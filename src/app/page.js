@@ -35,6 +35,7 @@ export default function Home() {
     ]);
     setTask("");
   };
+
   const handleDelete = (id) => {
     setTasks((prev) => prev.filter((item) => item.id !== id));
   };
@@ -47,7 +48,6 @@ export default function Home() {
   const completedtasks = tasks.filter((item) => item.isDone).length;
   const Taskscount = tasks.length;
 
-  console.log(tasks);
   return (
     <div className="flex justify-center py-20">
       <Card className="w-94.25 ">
@@ -74,19 +74,19 @@ export default function Home() {
               <TabsList className="flex gap-1.5 pl-4">
                 <TabsTrigger
                   value="All"
-                  className="data-[state=active]:bg-[#3C82F6] data-[state=active]:text-white h-8"
+                  className="data-[state=active]:bg-[#3C82F6] data-[state=active]:text-white h-8 bg-[#F3F4F6] text-[#363636]"
                 >
                   All
                 </TabsTrigger>
                 <TabsTrigger
                   value="Active"
-                  className="data-[state=active]:bg-[#3C82F6] data-[state=active]:text-white h-8"
+                  className="data-[state=active]:bg-[#3C82F6] data-[state=active]:text-white h-8 bg-[#F3F4F6] text-[#363636]"
                 >
                   Active
                 </TabsTrigger>
                 <TabsTrigger
                   value="Completed"
-                  className="data-[state=active]:bg-[#3C82F6] data-[state=active]:text-white h-8"
+                  className="data-[state=active]:bg-[#3C82F6] data-[state=active]:text-white h-8 bg-[#F3F4F6] text-[#363636]"
                 >
                   Completed
                 </TabsTrigger>
